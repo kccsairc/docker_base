@@ -9,5 +9,6 @@ RUN apt-get -y install libjpeg-dev libopencv-dev python-pip python-dev \
 
 # Python requirements
 RUN easy_install -U pip
-RUN pip install Cython numpy scipy scikit-image gevent mprpc joblib Pillow \
-    matplotlib pika==0.9.14 fluent-logger==0.3.4 psycopg2==2.5.4
+RUN pip install Cython
+RUN pip install numpy scipy scikit-image gevent mprpc joblib Pillow
+RUN pip install matplotlib pika==0.9.14 fluent-logger==0.3.4 psycopg2==2.5.4
