@@ -8,8 +8,8 @@ RUN apt-get update &&  \
     apt-get install -y libblas-dev libatlas-dev libatlas-base-dev liblapack-dev && \
     apt-get install -y gfortran libpq-dev libjpeg-dev  && \
     apt-get update && \
-    apt-get install -y libopencv-dev --fix-missing
-
+    apt-get install -y libopencv-dev --fix-missing && \
+    apt-get install python-dev libffi-dev libssl-dev
 # Python requirements
 RUN easy_install -U pip && \
     pip install Cython==0.20.2 && \
@@ -23,4 +23,5 @@ RUN easy_install -U pip && \
     pip install joblib==0.8.4 && \
     pip install  pika==0.9.14 && \
     pip install fluent-logger==0.3.4 && \
-    pip install psycopg2==2.5.4
+    pip install psycopg2==2.5.4 && \
+    pip install --upgrade ndg-httpsclient
