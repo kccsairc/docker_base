@@ -9,7 +9,7 @@ RUN apt-get update &&  \
     apt-get install -y gfortran libpq-dev libjpeg-dev  && \
     apt-get update && \
     apt-get install -y libopencv-dev --fix-missing && \
-    apt-get install python-dev libffi-dev libssl-dev
+    apt-get install libffi-dev libssl-dev
 # Python requirements
 RUN easy_install -U pip && \
     pip install Cython==0.20.2 && \
